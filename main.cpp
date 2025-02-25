@@ -41,7 +41,6 @@ int main() {
         int minChild;
         read(pipefd[0], &minChild, sizeof(minChild));
         close(pipefd[0]);
-        wait(NULL);
 
         int result = std::min(minParent, minChild);
         std::cout << "OVERALL MIN: " << result;
